@@ -1,6 +1,6 @@
 # Online Adaptive Assessment Platform
 
-An intelligent platform built using Flask that delivers an adaptive assessment experience. The platform dynamically adjusts question difficulty based on user performance, ensuring a personalized and engaging testing process. 
+An intelligent platform built using Flask that delivers an adaptive assessment experience. The platform dynamically adjusts question difficulty based on user performance, ensuring a personalized and engaging testing process. The platform also incorporates a **Decision Tree** model for question selection, optimizing the assessment experience.
 
 ## 🚀 Features
 
@@ -11,7 +11,7 @@ An intelligent platform built using Flask that delivers an adaptive assessment e
 - **Automation with Flask**: Backend powered by Flask, enabling a seamless user experience.
 
 ## 🛠️ Technologies Used
-
+- **Model**: Decision Tree for adaptive question selection
 - **Backend**: Flask (Python)
 - **Frontend**: HTML, CSS, Jinja2 Templates
 - **Data Storage**: CSV files for storing and categorizing questions
