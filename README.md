@@ -1,25 +1,43 @@
-Online Adaptive Assessment Platform
+# Online Adaptive Assessment Platform
 
-This repository contains the Online Adaptive Assessment Platform, a dynamic and intelligent system designed to streamline the assessment process. By leveraging adaptive algorithms, the platform adjusts question difficulty based on user performance, ensuring a tailored and engaging experience for learners.
+An intelligent platform built using Flask that delivers an adaptive assessment experience. The platform dynamically adjusts question difficulty based on user performance, ensuring a personalized and engaging testing process. 
 
-🚀 Features
+## 🚀 Features
 
-Adaptive Questioning: Automatically adjusts the difficulty of questions based on user responses.
+- **Dynamic Difficulty Adjustment**: Questions are categorized as `easy`, `medium`, or `hard`, and the difficulty level adapts based on user responses.
+- **Question Categorization**: Logical, reasoning, and aptitude questions are managed efficiently from a CSV dataset.
+- **Real-time Scoring**: Scores are updated dynamically as users answer questions.
+- **Performance Insights**: The platform supports tracking user performance to fine-tune difficulty.
+- **Automation with Flask**: Backend powered by Flask, enabling a seamless user experience.
 
-User Management: Support for creating, editing, and managing student and instructor accounts.
+## 🛠️ Technologies Used
 
-Customizable Tests: Instructors can create tests with a wide range of question types (MCQs, short answer, etc.).
+- **Backend**: Flask (Python)
+- **Frontend**: HTML, CSS, Jinja2 Templates
+- **Data Storage**: CSV files for storing and categorizing questions
+- **Libraries**: Flask, Python `csv` module
+- **Deployment**: Local server with Flask (Debug Mode)
 
-Real-time Performance Tracking: Detailed analytics and reports for individual or group performance.
+## 💡 Getting Started
 
-Secure and Scalable: Implements robust authentication and data handling to ensure secure assessments.
+### Prerequisites
 
-🛠️ Technologies Used
+- Python 3.x installed
+- Flask installed (`pip install flask`)
 
-Backend: Javascript
+### Installation
 
-Frontend: HTML, CSS, Bootstrap
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/Online-Adaptive-Assessment-Platform.git
+   cd Online-Adaptive-Assessment-Platform
+2. Install dependencies:
+   pip install -r requirements.txt
+3.Run the application:
+    python main.py
+4. Access the platform:
+     Open your browser and navigate to http://127.0.0.1:5000.
+### Datasets
+diff_data.csv: Contains questions with difficulty levels (easy, medium, hard) and categories (logical, reasoning, aptitude).
+cat_data.csv: Provides predictions for categories to guide question selection.
 
-Database: MySQL
-
-Authentication: JSON Web Tokens (JWT)
