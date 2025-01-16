@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Login student form</title>
+<link rel="stylesheet" href="style.css">
+    
+</head>
+<style>
+body
+{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background: url(/static/book1.jpg);
+    background-size:1535px 900px;
+}
+.box
+{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:400px;
+    height: 500px;
+    padding:50px;
+    background: rgba(0,0,0,.5);
+    box-sizing:border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.8);
+    border-radius: 10px;
+    
+}
+.box h2
+{
+    margin: 0 0 30px;
+    padding: 0;
+    color:#fff;
+    text-align:center;
+    
+}
+.box .inputBox
+{
+    position: relative;
+}
+.box .inputBox input
+{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom:1px solid #ffff;
+    outline: none;
+    background: transparent;
+}
+p{
+    color: white;
+    
+}
+a{
+    color:white;
+}
+
+
+.box input[type="submit"]
+{
+background-color:whitesmoke;
+    border-radius:15px;
+    color:black;
+    padding: 10px 36px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.box .image
+{
+    width: 90px;
+    height:97px;
+    position: absolute;
+    border-radius: 50%;
+    top: -50px;
+    left:40%;
+}
+</style>
+<body>
+<div class="box">
+    <center> <img src="/static/st.png" class="image"></center>
+<h2>Login</h2>
+<form>
+<div class="inputBox">
+    <b><p>Username</p></b>
+    
+<input type="text" placeholder="username" name="">
+    <b><p>Password</p></b>
+<input type="password" placeholder="password" name="">
+</div>
+    <br>
+    <div>
+    <center><input type="submit" name="" value="Login"></center><<br>
+        <br>
+    <center> <a href="register.html">Create an account?</a></center>
+    </div>
+    </form>
+    </div>
+    </body>
+</html>
+     
+
+

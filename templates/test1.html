@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home Page </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar  a:hover  {
+      margin-bottom: 0;
+      border-radius: 0;
+      background-color:#F0F8FF;
+      background: rgba(0,0,0,.3);
+      padding-bottom: 20px;
+       
+  
+}
+
+
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    .row.content {height: 1500px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav  {
+      background-color: #f1f1f1;
+      height: 30%;
+      width: 300px;
+    }
+    .ab{
+      font-size: 15px;
+    }
+
+    
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+      width: 2000px;
+    }
+    .dropdown{
+      padding-top:10px; 
+    }
+    
+.nav1 a:hover{
+  background-color: #8A2BE2;
+
+}
+
+    
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #000000;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 15px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  position: absolute;
+  top: 70%;
+  right: 43%;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.text-block {
+    
+   
+   position: absolute;
+    bottom: 250px;
+    right: 500px;
+    background-color: black;
+    color: white;
+    padding-left: 80px;
+    padding-right: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    opacity: 0.5;
+
+}
+
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container .btn:hover {
+  background-color: black;
+}
+
+.carousel-inner{
+  
+  height: 600px;
+}
+.container {
+  position: relative;
+  
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 0.5;
+}
+
+.overlay {
+  
+ 
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+  </style>
+
+
+
+
+</head>
+<body>
+<body onload="countdown()">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+</script>
+<!-- <form id="frm">Seconds:
+    <input type="text" id="seconds" name="seconds" value="0" size="2" maxlength="2" />
+    <br/>
+    <input type="button" id="btnct" value="Input" />
+</form> -->
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <div class="ab">
+      <ul class="nav navbar-nav">
+        
+        <li><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        <li><a href="/login"><span class="glyphicon glyphicon-earphone"></span> Contact</a></li>
+        <li><a href="/register"><span class="glyphicon glyphicon-envelope"></span> Feedback</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-globe"></span> About Us</a></li>
+      </ul></div>
+      <ul class="nav navbar-nav navbar-right">
+        <form class="navbar-form navbar-right" role="search">
+        <div class="form-group input-group">
+          <input type="text" class="form-control" placeholder="Search..">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </span>        
+        </div>
+      </form>
+
+      <ul class="nav navbar-nav navbar-right">
+        
+        
+    <li><a href="/logout">Logout</a></li>
+    
+  </ul>
+
+
+    <li style="font-size: 15px;"><a href="/profile">Profile</a></li>
+      </ul>
+      </ul>
+    </div>
+  </div>
+  </nav>
+
+
+<span id="timespan" ></span>
+<span id="timespan1" ></span>
+
+ 
+  <!-- <script>
+    function countDown(secs,elem) {
+      var element = document.getElementById(elem);
+      if(secs >= 10){
+        if(secs < 60){
+          element.innerHTML = "<p style='color:red'>Time left 00:"+secs+" seconds</p>";
+        }
+        else{
+          element.innerHTML = "<p style='color:red'>Time left 01:00 minute</p>";
+        }  
+      }
+      else{
+        element.innerHTML = "<p style='color:red'>Time left 00:0"+secs+" seconds</p>";
+      }
+      if(secs < 1) {
+        clearTimeout(timer);
+        location.href = '{{ url_for( 'check_answer' ) }}';
+      }
+      secs--;
+      var timer = setTimeout('countDown('+secs+',"'+elem+'")',1000);
+    }
+  </script> -->
+  <form method="POST" action="/check_answer">
+    <div class="col-sm-8 text-left" style="margin-left: 300px">
+        <!-- Timer--> <h4 id="status"></h4>
+        <h3 id = "question">{{question}}</h3>
+        <div style="margin-left: 50px;font-size: 20px">
+          <div class="checkbox">
+            <label id="option1"><input type="checkbox" name="option1">{{option1}}</label>
+          </div>
+          <div class="checkbox">
+            <label id="option2"><input type="checkbox" name="option2">{{option2}}</label>
+          </div>
+          <div class="checkbox">
+            <label id="option3"><input type="checkbox" name="option3">{{option3}}</label>
+          </div>
+          <div class="checkbox">
+            <label id="option4"><input type="checkbox" name="option4">{{option4}}</label>
+          </div>
+          <label>Score </label>          
+          <label>{{score}}</label>
+                    <label>Predicted Difficulty </label>          
+          <label>{{pred}}</label>
+          <label>{{r}}</label>
+          <label>{{ID}}</label>
+                    <label>{{option1a}}</label>
+                              <label>{{option2a}}</label>
+                                <label>{{option3a}}</label>
+                                          <label>{{option4a}}</label>
+        </div>
+
+        <div align="center"><button type="submit" class="btn btn-info">Next</button></div>        
+      </div>
+
+</form>
+<form  method="POST">
+      <p id="time"></p>
+      <p id="freeztime"></p>
+      <p id="freeztime1"></p>
+        <div align="center"><button type="submit" class="btn btn-info" onclick="cdpause()">Submit</button></div>
+      </form>
+<script type="text/javascript">
+
+
+var CCOUNT=0;
+var time;
+var pause;
+// $(document).ready(function () {
+//     $('#btnct').click(function () {
+        // CCOUNT = $('#seconds').val();
+cdreset();
+//     });
+// });
+var t, count;
+
+function cddisplay() {
+    document.getElementById('time').innerHTML = count;
+
+}
+
+function countdown() {
+    // starts countdown
+    // cdreset();
+    cddisplay();
+    if (count === 60) {
+        // time is up
+        cdpause();
+    } else {
+        count++;
+        t = setTimeout(countdown, 1000);
+    }
+}
+
+function cdpause() {
+    // pauses countdown
+    clearTimeout(t);
+    time=25;
+
+    document.getElementById('freeztime').innerHTML = time;
+    
+}
+
+function submit() {
+    // pauses countdown
+    clearTimeout(t);
+    pause=count;
+    document.getElementById('freeztime1').innerHTML = pause;
+    
+}
+
+function cdreset() {
+    // resets countdown
+    cdpause();
+    count = CCOUNT;
+    // countdown();
+}
+
+function reset() {
+    // resets countdown
+    cdpause();
+    count = CCOUNT;
+    countdown();
+    location.href = '{{ url_for( 'check_answer' )}}';
+}
+</script>
+
+
+</body>
+</html>

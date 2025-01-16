@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home Page </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    
+
+
+
+    .ab{
+      font-size: 15px;
+    }
+
+    
+    
+    .dropdown{
+      padding-top:10px; 
+    }
+    
+
+
+    
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #000000;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 15px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  position: absolute;
+  top: 70%;
+  right: 43%;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.text0 {
+    
+   
+   position: absolute;
+    bottom: 400px;
+    left: 250px;
+    position: absolute;
+    white-space: nowrap;
+    -webkit-animation: leftThenRight 2s ;
+    color: white;
+  }
+@-webkit-keyframes leftThenRight {
+    0%   { left:25px;}
+    
+    
+
+#body.loaded .text0 {
+    opacity: 1;
+}
+}
+    
+}
+
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container .btn:hover {
+  background-color: black;
+}
+
+.carousel-inner{
+  
+  height: 600px;
+}
+.container {
+  position: relative;
+
+  
+}
+
+
+
+.container:hover .overlay {
+  opacity: 0.5;
+
+}
+
+
+
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.7);
+  transition: 0.3s;
+  width: 49%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.9);
+}
+
+.container1 {
+  padding: 20px 20px;
+
+}
+.text-block1 {
+    
+   
+   
+    background-color:#4682B4;
+    color: #FFFFFF;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+   
+}
+.text-block2 {
+    
+   
+   
+    background-color:#696969;
+    color: #FFFFFF;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+   
+}
+  </style>
+
+
+
+
+
+</head>
+<body onload="document.body.className += ' loaded';">
+<script>
+  
+  window.onload = function() {
+    document.body.className += " loaded";
+}
+</script>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">9To5</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <div class="ab">
+      <ul class="nav navbar-nav">
+        
+        <li><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        <li><a href="/login"><span class="glyphicon glyphicon-earphone"></span> Contact</a></li>
+        <li><a href="/register"><span class="glyphicon glyphicon-envelope"></span> Feedback</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-globe"></span> About Us</a></li>
+      </ul></div>
+      <ul class="nav navbar-nav navbar-right">
+        <form class="navbar-form navbar-right" role="search">
+        <div class="form-group input-group">
+          <input type="text" class="form-control" placeholder="Search..">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </span>        
+        </div>
+      </form>
+
+      <ul class="nav navbar-nav navbar-right">
+        
+        <div class="dropdown">
+  <button class="btn btn-primaryy dropdown-toggle" type="button" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>Profile
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#">Logout</a></li>
+    
+  </ul></div></ul>
+
+
+    <li style="font-size: 15px;"><a href="#"><span class="glyphicon glyphicon-bell"></span> Notifications</a></li>
+      </ul>
+      </div>
+    </div>
+    </nav>
+
+
+ 
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <img src="/static/dic.png" alt="Los Angeles" style="width: 100%">
+        
+      </div>
+
+      <div class="item">
+        <img src="/static/fl.jpg" alt="Chicago" style="width: 100%">
+        
+      </div>
+    
+      <div class="item" >
+        <img src="/static/s.jpg" alt="New York" style="width: 100%" >
+        
+      </div>
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+ <button class="button" style="vertical-align:middle"><span>Start </span></button>
+ 
+ 
+  <div class="text0">
+      <b>  <h1 style="font-size: 80px; font-family: cursive;">Practice Tests</h1></b>
+           </div>
+           
+    </div>
+  </div>
+  
+  
+
+
+<br><br><br>
+ <div class="text-block1" style="font-size: 30px;"><center>Programming Languages</center></div><br>
+ <center>  <b><font size="6" style="font-family: cursive;">C++</font></b></center><br><br>
+ 
+    <div class="card" style="margin-left: 370px; position: relative;" >
+  
+  <div class="container1">
+     <center><h4><a href="https://www.careerride.com/mcq-daily/c-test-questions-set-1-47.aspx">Test Question Set 1</h4></a><br>
+     <a href="#home"><h4>Test Question Set 2</h4></a><br>
+     <a href="#home"><h4>Test Question Set 3</h4></a><br>
+     </center>
+    </div></div>
+  
+<br><br><br><br>
+<center>  <b><font size="6" style="font-family: cursive;">Java</font></b></center><br><br>
+   <div class="card"style="margin-left: 370px; position: relative;"  >
+
+  
+  <div class="container1">
+      <center><h4><a href="https://www.careerride.com/mcq-daily/java-test-questions-set-1-36.aspx">Test Question Set 1</h4></a><br>
+     <a href="#home"><h4>Test Question Set 2</h4></a><br>
+     <a href="#home"><h4>Test Question Set 3</h4></a><br>
+     </center>
+   </div></div>
+<br><br><br><br>
+    <center>  <b><font size="6" style="font-family: cursive;">Python</font></b></center><br><br>
+  <div class="card"style="margin-left: 370px; position: relative;" >
+  <div class="container1">
+     <center><h4><a href="#home">Test Question Set 1</h4></a><br>
+     <a href="#home"><h4>Test Question Set 2</h4></a><br>
+     <a href="#home"><h4>Test Question Set 3</h4></a><br>
+     </center>
+    </div></div>
+  
+
+  <br><br><br>
+  <br>
+ <div class="text-block1" style="font-size: 30px;"><center>Mathematics</center></div><br><br>
+ <center>  <b><font size="6" style="font-family: cursive;">Algebra</font></b></center><br><br>
+ 
+    <div class="card" style="margin-left: 370px; position: relative;" >
+  
+  <div class="container1">
+     <center><h4><a href="#home">Test Question Set 1</h4></a><br>
+     <a href="#home"><h4>Test Question Set 2</h4></a><br>
+     <a href="#home"><h4>Test Question Set 3</h4></a><br>
+     </center>
+    </div></div>
+  
+<br><br><br><br>
+<center>  <b><font size="6" style="font-family: cursive;">Geometry</font></b></center><br><br>
+   <div class="card"style="margin-left: 370px; position: relative;"  >
+
+  
+  <div class="container1">
+      <center><h4><a href="#home">Test Question Set 1</h4></a><br>
+     <a href="#home"><h4>Test Question Set 2</h4></a><br>
+     <a href="#home"><h4>Test Question Set 3</h4></a><br>
+     </center>
+   </div></div>
+<br><br><br><br>
+    <center>  <b><font size="6" style="font-family: cursive;">Probability</font></b></center><br><br>
+  <div class="card"style="margin-left: 370px; position: relative;" >
+  <div class="container1">
+     <center><h4><a href="#home">Test Question Set 1</h4></a><br>
+     <a href="#home"><h4>Test Question Set 2</h4></a><br>
+     <a href="#home"><h4>Test Question Set 3</h4></a><br>
+     </center>
+    </div></div>
+  
+
+  <br><br><br>
+  <br>
+ <div class="text-block1" style="font-size: 30px;"><center>Reasoning</center></div><br><br>
+<center>  <b><font size="6" style="font-family: cursive;">Logical</font></b></center><br><br>
+ 
+    <div class="card" style="margin-left: 370px; position: relative;" >
+  
+  <div class="container1">
+     <center><h4><a href="#home">Test Question Set 1</h4></a><br>
+     <a href="#home"><h4>Test Question Set 2</h4></a><br>
+     <a href="#home"><h4>Test Question Set 3</h4></a><br>
+     </center>
+    </div></div>
+  
+<br><br><br><br>
+<center>  <b><font size="6" style="font-family: cursive;">Quantative</font></b></center><br><br>
+   <div class="card"style="margin-left: 370px; position: relative;"  >
+
+  
+  <div class="container1">
+      <center><h4><a href="#home">Test Question Set 1</h4></a><br>
+     <a href="#home"><h4>Test Question Set 2</h4></a><br>
+     <a href="#home"><h4>Test Question Set 3</h4></a><br>
+     </center>
+   </div></div>
+<br><br><br><br>
+    <center>  <b><font size="6" style="font-family: cursive;">Python</font></b></center><br><br>
+  <div class="card"style="margin-left: 370px; position: relative;" >
+  <div class="container1">
+     <center><h4><a href="#home">Test Question Set 1</h4></a><br>
+     <a href="#home"><h4>Test Question Set 2</h4></a><br>
+     <a href="#home"><h4>Test Question Set 3</h4></a><br>
+     </center>
+    </div></div>
+  
+
+  <br><br><br>
+     
+<div class="text-block2" style="font-size: 30px;"><center>Footer</center>
+
+
+   
+      
+
+
+
+
+      
+    
+     
+  
+      
+  
+    
+      
+    
+    
+
+    
+</body>
+</html>

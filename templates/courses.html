@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home Page </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar  a:hover  {
+      margin-bottom: 0;
+      border-radius: 0;
+      background-color:#F0F8FF;
+      background: rgba(0,0,0,.3);
+      padding-bottom: 20px;
+       
+  
+}
+
+
+    
+    
+    
+    .ab{
+      font-size: 15px;
+    }
+
+    
+    
+    .dropdown{
+      padding-top:10px; 
+    }
+    
+
+
+    
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #000000;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 15px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  position: absolute;
+  top: 70%;
+  right: 43%;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.text0 {
+    
+   
+   position: absolute;
+    bottom: 400px;
+    left: 250px;
+    position: absolute;
+    white-space: nowrap;
+    -webkit-animation: leftThenRight 2s ;
+    color: white;
+  }
+@-webkit-keyframes leftThenRight {
+    0%   { left:25px;}
+    
+    
+
+#body.loaded .text0 {
+    opacity: 1;
+}
+}
+    
+}
+
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container .btn:hover {
+  background-color: black;
+}
+
+.carousel-inner{
+  
+  height: 600px;
+}
+.container {
+  position: relative;
+
+  
+}
+
+
+
+
+
+.container:hover .overlay {
+  opacity: 0.5;
+
+}
+
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 49%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.9);
+}
+
+.container1 {
+  padding: 10px 16px;
+}
+.text-block1 {
+    
+   
+   
+    background-color:#5F9EA0;
+    color: #FFFFFF;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+   
+}
+.text-block2 {
+    
+   
+   
+    background-color:#696969;
+    color: #FFFFFF;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+   
+}
+ .modal2 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content2 {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+  </style>
+
+
+
+
+
+</head>
+<body onload="document.body.className += ' loaded';">
+<script>
+  
+  window.onload = function() {
+    document.body.className += " loaded";
+}
+</script>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">9To5</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <div class="ab">
+      <ul class="nav navbar-nav">
+        
+        <li><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        <li><a href="/login"><span class="glyphicon glyphicon-earphone"></span> Contact</a></li>
+        <li><a href="/register"><span class="glyphicon glyphicon-envelope"></span> Feedback</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-globe"></span> About Us</a></li>
+      </ul></div>
+      <ul class="nav navbar-nav navbar-right">
+        <form class="navbar-form navbar-right" role="search">
+        <div class="form-group input-group">
+          <input type="text" class="form-control" placeholder="Search..">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </span>        
+        </div>
+      </form>
+
+      <ul class="nav navbar-nav navbar-right">
+        
+        <div class="dropdown">
+  <button class="btn btn-primaryy dropdown-toggle" type="button" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>Profile
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#">Logout</a></li>
+    
+  </ul></div></ul>
+
+
+    
+      </ul>
+      
+      
+    </div>
+  </div>
+  
+</div>
+      </div>
+    </div>
+    </nav>
+
+
+ 
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <img src="/static/d.jpg" alt="Los Angeles" style="width: 100%">
+        
+      </div>
+
+      <div class="item">
+        <img src="/static/b3.jpg" alt="Chicago" style="width: 100%">
+        
+      </div>
+    
+      <div class="item" >
+        <img src="/static/ll.jpg" alt="New York" style="width: 100%" >
+        
+      </div>
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+ <button class="button" style="vertical-align:middle"><span>Start </span></button>
+ 
+ 
+  <div class="text0">
+      <b>  <h1 style="font-size: 80px; font-family: cursive;">Course</h1></b>
+           </div>
+           
+    </div>
+  </div>
+  
+  
+
+
+<br><br><br>
+ <div class="text-block1" style="font-size: 30px;"><center>Programming Languages</center></div><br>
+  <center>  <b><font size="6" style="font-family: cursive;"> <q>Happiness Is Programming All Day!</q></font></b></center><br><br>
+<table>
+<tr>
+    <th><a href="#home"><div id="btn"class="card" style="margin-left: 210px; position: relative;" >
+  <img src="/static/cs.png" alt="Avatar" style="width:200px;">
+  <br><br>
+  <div class="container1">
+  <center><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open</button></center>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <center><h4 class="modal-title">C++</h4></center>
+        </div>
+        <div class="modal-body">
+          <center><p style="font-size: 20px;">Introduction<br>
+            <center>
+                  <video width="320" height="240" controls autoplay>
+                       <source src="\static\c.mp4" type="video/mp4">
+
+                       <source src="\c.ogg" type="video/ogg">
+
+                       Your browser does not support the video tag.
+                  </video>
+                  </center><br><br>
+<center  style="font-size: 20px;">Tutorial Sites</center><br>
+<a href="https://www.geeksforgeeks.org/c-plus-plus/">C++ 1</a><br><br>
+<a href="https://www.tutorialspoint.com/cplusplus/">C++ 2</a><br><br>
+<a href="https://www.codecademy.com/learn/learn-c-plus-plus">C++ 3</a><br><br>
+</center>
+
+
+<center  style="font-size: 20px;">Blogs</center><br>
+<center><a href="https://akrzemi1.wordpress.com/">blog1</a><br><br>
+<a href="https://isocpp.org/blog">blog2</a><br><br></center>
+</center>
+          </p></center>        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+</div>
+
+    </div></div></th>
+  
+<br>
+<th>
+  <div class="card"style="margin-left: 210px; position: relative;"  >
+  <img src="/static/java.jpg" alt="Avatar" style="width:200px; height: 200px;">
+  <br><br>
+  <div class="container1">
+
+    <center><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1">Open</button></center>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <center><h4 class="modal-title">Java</h4></center>
+        </div>
+        <div class="modal-body">
+          <center><p>Tutorial sites<br>
+            <center>
+                  <video width="320" height="240" controls autoplay>
+                       <source src="\static\java.mp4" type="video/mp4">
+
+                       <source src="java.ogg" type="video/ogg">
+
+                       Your browser does not support the video tag.
+                  </video>
+                  </center><br><br>
+<center  style="font-size: 20px;">Tutorial Sites</center><br>
+<a href="https://www.java.com/download/">Java 1</a><br><br>
+<a href="https://www.tutorialspoint.com/java/">Java 2</a><br><br>
+<br><br>
+</center>
+
+
+<center  style="font-size: 20px;">Blogs</center><br>
+<center><a href="http://www.javaworld.com/">blog1</a><br><br>
+<a href="https://www.javacodegeeks.com/">blog2</a><br><br></center>
+</center>
+
+
+          </p></center>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+</div>
+</div>
+
+  
+    <th>
+  <div class="card"style="margin-left: 210px; position: relative;" >
+  <img src="/static/py1.jpg" alt="Avatar"style="width:200px; height: 200px;">
+  <br><br>
+  <div class="container1">
+     <center><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">Open</button></center>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <center><h4 class="modal-title">Python</h4></center>
+        </div>
+        <div class="modal-body">
+          <center><p>Tutorial sites<br>
+            <center>
+                  <video width="320" height="240" controls  autoplay>
+                       <source src="\static\py.mp4" type="video/mp4">
+
+                       <source src="py.ogg" type="video/ogg">
+
+                       Your browser does not support the video tag.
+                  </video>
+                  </center><br><br>
+<center  style="font-size: 20px;">Tutorial Sites</center><br>
+<a href="https://www.w3schools.com/python/">Python 1</a><br><br>
+<a href="https://docs.python.org/3/tutorial/">Python 2</a><br><br>
+<br><br>
+</center>
+
+
+<center  style="font-size: 20px;">Blogs</center><br>
+<center><a href="http://www.pybloggers.com/">blog1</a><br><br>
+<a href="https://www.fullstackpython.com/blog.html">blog2</a><br><br></center>
+</center>
+
+
+          </p></center>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+</div>
+</div>
+    </div>
+  </div>
+  
+</div>
+
+     
+    </div></div></th></tr> 
+  
+</table>
+  <br><br><br>
+  <br>
+ <div class="text-block1" style="font-size: 30px;"><center>Mathematics</center></div><br><br>
+ <center>  <b><font size="6" style="font-family: cursive;"> <q>The Only Way to Learn Mathematics <br> Is to do Mathematics</q></font></b></center><br><br>
+<table>
+<tr>
+    <th><a href="#home"><div class="card" style="margin-left: 210px; position: relative;" >
+  <img src="/static/al.jpg" alt="Avatar" style="width:200px; height: 200px;">
+  <br><br>
+  <div class="container1">
+     <center><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal4">Open</button></center>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal4" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <center><h4 class="modal-title">Algebra</h4></center>
+        </div>
+        <div class="modal-body">
+          <center><p>Tutorial sites<br>
+            <center>
+                  <video width="320" height="240" controls autoplay>
+                       <source src="\static\al.mp4" type="video/mp4">
+
+                       <source src="Al.ogg" type="video/ogg">
+
+                       Your browser does not support the video tag.
+                  </video>
+                  </center><br><br>
+<center  style="font-size: 20px;">Tutorial Sites</center><br>
+<a href="https://www.khanacademy.org/math/algebra">Algebra 1</a><br><br>
+<a href="https://www.analyzemath.com/Algebra1/Tutorials.html">Algebra 2</a><br><br>
+<br><br>
+</center>
+
+
+<center  style="font-size: 20px;">Blogs</center><br>
+<center><a href="http://www.javaworld.com/">blog1</a><br><br>
+<a href="https://www.javacodegeeks.com/">blog2</a><br><br></center>
+</center>
+
+
+          </p></center>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+</div>
+</div>
+      
+    </div>
+  </div>
+  
+</div>
+
+    </div></div></th>
+  
+<br>
+<th>
+  <a href="#home"><div class="card"style="margin-left: 210px; position: relative;"  >
+  <img src="/static/geo.jpg" alt="Avatar" style="width:200px; height: 200px;">
+  <br><br>
+  <div class="container1">
+     <center><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal5">Open</button></center>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal5" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <center><h4 class="modal-title">Geometry</h4></center>
+        </div>
+        <div class="modal-body">
+          <center><p>Tutorial sites<br>
+            <center>
+                  <video width="320" height="240" controls autoplay>
+                       <source src="\static\geo.mp4" type="video/mp4">
+
+                       <source src="geo.ogg" type="video/ogg">
+
+                       Your browser does not support the video tag.
+                  </video>
+                  </center><br><br>
+<center  style="font-size: 20px;">Tutorial Sites</center><br>
+<a href="https://www.khanacademy.org/math/geometry">Geometry 1</a><br><br>
+<a href="https://www.mathplanet.com/education/geometry">Geometry 2</a><br><br>
+<br><br>
+</center>
+
+
+<center  style="font-size: 20px;">Blogs</center><br>
+<center><a href="http://www.javaworld.com/">blog1</a><br><br>
+<a href="https://www.javacodegeeks.com/">blog2</a><br><br></center>
+</center>
+
+
+          </p></center>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+</div>
+</div>
+</div>
+
+
+   </div></div></th>
+
+    <th>
+  <a href="#home"><div class="card"style="margin-left: 210px; position: relative;" >
+  <img src="/static/prob.jpeg" alt="Avatar" style="width:200px; height: 200px;">
+  <br><br>
+  <div class="container1">
+     <center><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal6">Open</button></center>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal6" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <center><h4 class="modal-title">Java</h4></center>
+        </div>
+        <div class="modal-body">
+          <center><p>Tutorial sites<br>
+            <center>
+                  <video width="320" height="240" controls autoplay>
+                       <source src="\static\pro.mp4" type="video/mp4">
+
+                       <source src="pro.ogg" type="video/ogg">
+
+                       Your browser does not support the video tag.
+                  </video>
+                  </center><br><br>
+<center  style="font-size: 20px;">Tutorial Sites</center><br>
+<a href="https://www.khanacademy.org/math/statistics-probability">Prob 1</a><br><br>
+<a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/tutorials/">Prob 2</a><br><br>
+<br><br>
+</center>
+
+
+<center  style="font-size: 20px;">Blogs</center><br>
+<center><a href="http://www.javaworld.com/">blog1</a><br><br>
+<a href="https://www.javacodegeeks.com/">blog2</a><br><br></center>
+</center>
+
+
+          </p></center>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+</div>
+</div>
+
+    </div></div></th></tr> 
+  
+</table>
+<table>
+<br><br><br>
+  <br>
+ <div class="text-block1" style="font-size: 30px;"><center>Reasoning</center></div><br><br>
+ <center>  <b><font size="6" style="font-family: cursive;"> <q>Crazy People Are Not Crazy<br>If One Accepts Their Reasoning</q></font></b></center><br><br>
+<table>
+<tr>
+    <th><a href="#home"><div class="card" style="margin-left: 210px; position: relative;" >
+  <img src="/static/log.jpeg" alt="Avatar"style="width:200px; height: 200px;">
+  <br><br>
+    <div class="container1">
+
+<div class="container1">
+     <center><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal7">Open</button></center>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal7" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <center><h4 class="modal-title">Logics</h4></center>
+        </div>
+        <div class="modal-body">
+          
+            <center>
+                  <video width="320" height="240" controls autoplay>
+                       <source src="\static\logic.mp4" type="video/mp4">
+
+                       <source src="logic.ogg" type="video/ogg">
+
+                       Your browser does not support the video tag.
+                  </video>
+                  </center><br><br>
+<center  style="font-size: 20px;">Tutorial Sites</center><br>
+,<center><a href="https://www.tutorialspoint.com/reasoning/">logic1</a><br><br>
+<a href="https://www.khanacademy.org/test-prep/lsat/lsat-lessons/logical-reasoning/a/logical-reasoning--article--getting-started">logic2</a><br><br>
+<br><br>
+</center>
+
+
+<center  style="font-size: 20px;">Blogs</center><br>
+<center><a href="http://www.javaworld.com/">blog1</a><br><br>
+<a href="https://www.javacodegeeks.com/">blog2</a><br><br></center>
+</center>
+
+
+          </p></center>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+</div>
+</div>
+      
+    </div>
+  </div>
+    </div></div></th>
+  
+<br>
+<th>
+  <a href="#home"><div class="card"style="margin-left: 210px; position: relative;"  >
+  <img src="/static/q.jpg" alt="Avatar" style="width:200px; height: 200px;">
+  <br><br>
+  <div class="container1">
+    
+   <center><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal8">Open</button></center>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal8" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <center><h4 class="modal-title">Quantative</h4></center>
+        </div>
+        <div class="modal-body">
+         
+            <center>
+                  <video width="320" height="240" controls autoplay>
+                       <source src="\static\q.mp4" type="video/mp4">
+
+                       <source src="q.ogg" type="video/ogg">
+
+                       Your browser does not support the video tag.
+                  </video>
+                  </center><br><br>
+<center  style="font-size: 20px;">Tutorial Sites</center><br>
+<center><a href="http://www.ucd.ie/statdept/classpages/introductiontoquantitativemet.htm">Quantative 1</a><br><br>
+<a href="http://edutechwiki.unige.ch/en/Methodology_tutorial_-_quantitative_data_analysis">Quantative 2</a><br><br>
+<br><br>
+</center>
+
+
+<center  style="font-size: 20px;">Blogs</center><br>
+<center><a href="http://www.javaworld.com/">blog1</a><br><br>
+<a href="https://www.javacodegeeks.com/">blog2</a><br><br></center>
+</center>
+
+
+          </p></center>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+</div>
+</div>
+      
+</div>
+
+   </div></div></th>
+
+    <th>
+  <a href="#home"><div class="card" style="margin-left: 210px; position: relative;" >
+
+  <img src="/static/app.jpg" alt="Avatar" style="width:200px; height: 200px;">
+  <br><br>
+  <div class="container1">
+  
+      
+     <center><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1">Open</button></center>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <center><h4 class="modal-title">Java</h4></center>
+        </div>
+        <div class="modal-body">
+          <center><p>Tutorial sites<br>
+            <center>
+                  <video width="320" height="240" controls autoplay>
+                       <source src="\static\java.mp4" type="video/mp4">
+
+                       <source src="java.ogg" type="video/ogg">
+
+                       Your browser does not support the video tag.
+                  </video>
+                  </center><br><br>
+<center  style="font-size: 20px;">Tutorial Sites</center><br>
+<a href="https://www.java.com/download/">Java 1</a><br><br>
+<a href="https://www.tutorialspoint.com/java/">Java 2</a><br><br>
+<br><br>
+</center>
+
+
+<center  style="font-size: 20px;">Blogs</center><br>
+<center><a href="http://www.javaworld.com/">blog1</a><br><br>
+<a href="https://www.javacodegeeks.com/">blog2</a><br><br></center>
+</center>
+
+
+          </p></center>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+</div>
+</div>
+      
+    </div>
+  </div>
+
+
+
+
+      
+    
+     
+  
+      
+  
+    
+      
+    
+    
+
+    
+</body>
+</html>

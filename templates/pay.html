@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home Page </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar  a:hover  {
+      margin-bottom: 0;
+      border-radius: 0;
+      background-color:#F0F8FF;
+      background: rgba(0,0,0,.3);
+      padding-bottom: 20px;
+       
+  
+}
+
+
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    .row.content {height: 1500px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav  {
+      background-color: #f1f1f1;
+      height: 30%;
+      width: 300px;
+    }
+    .ab{
+      font-size: 15px;
+    }
+
+    
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+      width: 2000px;
+    }
+    .dropdown{
+      padding-top:10px; 
+    }
+    
+.nav1 a:hover{
+  background-color: #8A2BE2;
+
+}
+
+    
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.text-block {
+    
+   
+   position: absolute;
+    bottom: 250px;
+    right: 500px;
+    background-color: black;
+    color: white;
+    padding-left: 80px;
+    padding-right: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    opacity: 0.5;
+
+}
+
+
+.containermain {
+  border-radius: 5px;
+  background-color: white;
+  padding: 20px;
+  height: 600px;
+  border-style: solid;
+
+
+</style>
+
+</head>
+<body>
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">QUIZ</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <div class="ab">
+      <ul class="nav navbar-nav">
+        
+        <li><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        <li><a href="/login"><span class="glyphicon glyphicon-earphone"></span> Contact</a></li>
+        <li><a href="/register"><span class="glyphicon glyphicon-envelope"></span> Feedback</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-globe"></span> About Us</a></li>
+      </ul></div>
+      <ul class="nav navbar-nav navbar-right">
+        <form class="navbar-form navbar-right" role="search">
+        <div class="form-group input-group">
+          <input type="text" class="form-control" placeholder="Search..">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </span>        
+        </div>
+      </form>
+
+      <ul class="nav navbar-nav navbar-right">
+        
+        <div class="dropdown">
+  <button class="btn btn-primaryy dropdown-toggle" type="button" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>Profile
+  <span class="caret"></span></button>
+  </div></ul>
+
+
+    <li style="font-size: 15px;"><a href="#"><span class="glyphicon glyphicon-bell"></span> Notifications</a></li>
+      </ul>
+      </ul>
+    </div>
+  </div>
+  </nav>
+
+
+<div class="containermain">
+  <center>
+        
+        <button class="button" onclick ="openWin()">Proceed towards payment</button>
+          
+
+</center>
+</div>
+
+<script>
+function openWin() {
+  window.open("http://localhost/paytm/PaytmKit/TxnTest.php");
+}
+</script>
+</body>
+</html>

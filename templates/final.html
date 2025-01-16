@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Webcam</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+<style>
+#videoElement {
+	
+	height: 80%;
+
+
+border:10px solid black;
+
+}
+#capture{
+	display: block;
+	margin: 10px 0;
+	padding: 10px 20px;
+	background-color: cornflowerblue;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	width: 120px;
+	height: 30px;
+	padding-top: 30px;
+	
+
+}
+#canvas{
+
+	
+border:10px solid black;
+}
+#download{
+	
+	display: block;
+	margin: 10px 0;
+	padding: 10px 20px;
+	background-color: cornflowerblue;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	width: 120px;
+	height: 30px;
+	padding-top: 30px;
+	
+	
+
+}
+
+}
+</style>
+<div>
+<center>
+<br><video autoplay='true' id='videoElement' width="800" height="500">
+</video><br>
+<br><center><a href="#" id="capture" class="video-capture"><font size="4">Take Photo</a></center></center></font></div><br>
+<center><canvas id="canvas"  width="800" height="500"></canvas></center><br>
+<center><a href="#" id="download"><font size="4">Download</a></center></font>
+<script>
+var video=document.querySelector("#videoElement");
+     canvas= document.getElementById('canvas'),
+     context=canvas.getContext('2d'),
+navigator.getUserMedia=navigator.getUserMedia||navigator.webkitGetUserMedia||navigator.mozGetUserMedia||navigator.msGetUserMedia||navigator.oGetUserMedia;
+if(navigator.getUserMedia){
+navigator.getUserMedia({video:true},handleVideo,videoError);
+}
+function handleVideo(stream){
+video.srcObject = stream;
+}
+function videoError(e){ 
+}
+document.getElementById('capture').addEventListener('click',function(){
+	context.drawImage(video,0,0,800,500);
+});
+function downloadCanvas(link, canvasId, filename) {
+    link.href = document.getElementById(canvasId).toDataURL();
+    link.download = filename;
+}
+
+/** 
+ * The event handler for the link's onclick event. We give THIS as a
+ * parameter (=the link element), ID of the canvas and a filename.
+*/
+document.getElementById('download').addEventListener('click', function() {
+    downloadCanvas(this, 'canvas', 'image.jpg');
+}, false);
+
+/**
+ * Draw something to canvas
+ */
+doCanvas();
+</script>
+</center>
+</html>
