@@ -1,4 +1,4 @@
-# Online Adaptive Assessment Platform
+# SMART QUIZ: AI-powered Adaptive Assessment Platform
 
 An intelligent platform built using Flask that delivers an adaptive assessment experience. The platform dynamically adjusts question difficulty based on user performance, ensuring a personalized and engaging testing process. The platform also incorporates a **Decision Tree** model for question selection, optimizing the assessment experience.
 
